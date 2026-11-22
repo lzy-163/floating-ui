@@ -16,6 +16,7 @@ jobs:
 
   unit-tests:
     name: Unit tests
+    needs: checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -24,6 +25,7 @@ jobs:
 
   functional-tests:
     name: Functional tests
+    needs: checks
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
